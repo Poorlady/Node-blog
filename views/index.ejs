@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %>
+<body>
+    <div class="container">
+        <%- include("partials/nav") %>
+        <main>
+            <h2>All blogs</h2>
+            <div>
+                <% if(blogs) {%>
+                    <% blogs.forEach(blog => { %>
+                        <div class="post-container">
+                            <a href=<%= "/blog/post/"+blog._id%>>
+                                <h3 class="post__title"><%= blog.title %></h3>
+                                <p class="post__snippet"><%= blog.snippet %></p>
+                            </a>
+                        </div>
+                    <% }) %>
+                <% }else {%>
+                    <p>There is no post</p>
+                <% } %>
+            </div>
+        </main>
+        <%- include("partials/footer") %>
+    </div>
+</body>
+</html>

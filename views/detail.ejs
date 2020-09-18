@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %>
+<body>
+    <div class="container">
+        <%- include("partials/nav") %>
+        <main>
+            <div class="post-detail-container">
+                <div>
+                    <div class="post-primary">
+                        <h2 class="detail-title"><%= post.title %></h2>
+                        <p class="detail-subtitle"><%=post.snippet%></p>
+                    </div>
+                    <div class="post-secondary">
+                        <p><%=post.body %></p>
+                    </div>
+                </div>
+                <button id="del-btn"  data-id="<%= post._id %>" class="btn--red detail-btn">Delete</button>
+            </div>
+        </main>
+        <%- include("partials/footer") %>
+    </div>
+    <script>
+        const deleteButton = document.getElementById('del-btn')
+
+        deleteButton.addEventListener("click", ()=>{
+            console.log("clicked");
+            const endpoint = `/blog/post/${deleteButton.dataset.id}`;
+
+            fetch(endpoint, {method: "DELETE"})
+            .then(result => result.json())
+            .then(data=> window.location.href = data.redirect)
+            .catch(err =>console.log(err))
+        })
+    </script>
+</body>
+</html>

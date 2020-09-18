@@ -1,0 +1,126 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 1.125rem;
+}
+nav{
+    width: 30%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+textarea{
+    height: 120px;
+}
+
+main{
+    min-height: 60vh;
+    margin-bottom: 2em;
+}
+
+
+/* typography */
+.title{
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+}
+
+.title,
+.sub-title,
+.post__snippet, 
+.post__title, 
+.detail-title,
+.detail-subtitle{
+    margin: 0;
+}
+
+.detail-title{
+    margin-right: .5em;
+}
+
+.detail-subtitle{
+    font-size: 1rem;
+    color: #808080;
+    padding: .7em 0 0 .5em;
+    border-left: thick solid #2b2b2b;
+}
+
+/* layout */
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-container,
+.nav__list, 
+.post-detail-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-container{
+    padding: 2em 0 1em;
+    border-bottom: 2px solid crimson;
+    margin-bottom: 2em;
+}
+
+.nav__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2em;
+}
+
+.post-container{
+    border-left: thick solid crimson;
+    padding: .5em 0 .5em 1em;
+    margin-bottom: 1em;
+}
+
+.create-form{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group{
+    margin-bottom: 1em;
+}
+
+.form-group label{
+    display: block;
+}
+
+.form-group input, textarea{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+.btn--red{
+    margin-top: 20px;
+    background: crimson;
+    color: white;
+    padding: 6px;
+    border: 0;
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+.post-detail-container{
+    margin-top: 4em;
+}
+
+.post-primary{
+    display: flex;
+    vertical-align: bottom;
+}
+
+.detail-btn{
+    margin-top: 0;
+    height: 2em;
+}
