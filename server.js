@@ -7,8 +7,7 @@ const blogRoutes = require("./routes/blogRoutes");
 
 const server = express();
 
-const dbURI =
-  "mongodb+srv://saniekasmara:Javamongodb98@storedb.e9u42.mongodb.net/Node-blog?retryWrites=true&w=majority";
+const dbURI = null
 
 server.set("view engine", "ejs");
 
